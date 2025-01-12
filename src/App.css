@@ -1,0 +1,33 @@
+.form-label {
+    text-align: center;
+    color: blue;
+    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 1200px;
+}
+#Btn1,#Btn2 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#Btn1 {
+    margin-left: 160px;
+}
+h1,p,h2{
+    text-align: center;
+}
+b {
+    color: green;
+}
+.ntn11 {
+    display: flex;
+    justify-content: center;
+}
