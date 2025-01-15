@@ -12,14 +12,14 @@
     box-sizing: border-box;
 }
 body {
-    height: 1200px;
+    height: 1000px;
 }
 #Btn1,#Btn2 {
     margin-top: 20px;
     margin-left: 20px;
 }
 #Btn1 {
-    margin-left: 160px;
+    margin-left: 100px;
 }
 h1,p,h2{
     text-align: center;
