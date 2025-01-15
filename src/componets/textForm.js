@@ -30,18 +30,30 @@ export default function TextForm(props) {
       msg.text= text;
       window.speechSynthesis.speak(msg);
     }
+    let handelCopy = () => {
+      let text = document.getElementById('mybox');
+      text.select();
+      navigator.clipboard.writeText(text.value)
+      window.alert("Text copied");
+    }
+    let handelExtra = () => {
+      let newText = text.split(/[ ]+/);
+      setText(newText.join(" "));
+    }
     
     const [text, setText]= useState(" ");
   return (
     <>
 <div className="mb-3">
-  <label htmlFor="Mybox" className="form-label">{props.text}</label>
+  <label htmlFor="Mybox" className="form-label">Enter text below</label>
   <textarea className="form-control" id="mybox" rows="8" value={text} onChange={handelChange}></textarea>
-  <button id='Btn1' className="btn btn-primary"onClick={handel}>Convert to uppercase</button>
-  <button id='Btn2' className="btn btn-primary"onClick={handel2}>Convert to Lowercase</button>
-  <button id='Btn2' className="btn btn-primary"onClick={handel3}>Convert to Email user Name</button>
-  <button id='Btn2' className="btn btn-primary"onClick={handel4}>Clear text area</button>
-  <button id='Btn2' className="btn btn-primary"onClick={handelspeak}>Speak buttton</button>
+  <button id='Btn1' className="btn btn-success"onClick={handel}>Convert to uppercase</button>
+  <button id='Btn2' className="btn btn-success"onClick={handel2}>Convert to Lowercase</button>
+  <button id='Btn2' className="btn btn-success"onClick={handel3}>Convert to Email user Name</button>
+  <button id='Btn2' className="btn btn-success"onClick={handel4}>Clear text area</button>
+  <button id='Btn2' className="btn btn-success"onClick={handelspeak}>Speak buttton</button>
+  <button id='Btn2' className="btn btn-success"onClick={handelCopy}>Copy Text</button>
+  <button id='Btn3' className="btn btn-success"onClick={handelExtra}>Remove extra speces</button>
 </div>
 <div className="container">
   <h1>Your text summery</h1>

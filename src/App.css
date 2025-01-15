@@ -2,8 +2,7 @@
     text-align: center;
     color: blue;
     margin-left: 400px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
     font-size: 30px;
 }
 *{
@@ -12,17 +11,23 @@
     box-sizing: border-box;
 }
 body {
-    height: 1000px;
+    /* height: 600px; */
+    /* background-color: rgb(250, 246, 246); */
 }
 #Btn1,#Btn2 {
     margin-top: 20px;
     margin-left: 20px;
 }
 #Btn1 {
-    margin-left: 100px;
+    
+}
+#Btn3 {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 h1,p,h2{
     text-align: center;
+    margin-bottom: 20px;
 }
 b {
     color: green;
@@ -30,4 +35,61 @@ b {
 .ntn11 {
     display: flex;
     justify-content: center;
+}
+/* For devices with a width of 1200px and above (desktops) */
+@media (min-width: 1200px) {
+    button {
+        font-size: 18px;
+        padding: 12px 10px;
+        margin: 10px;
+    }
+    .navbar-brand {
+        margin-left: 70px;
+    }
+    .form-check {
+        margin-left: 70px;
+    }
+}
+
+/* For tablets (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    button {
+        font-size: 16px;
+        padding: 10px 10px;
+        margin: 8px;
+    }
+    .navbar-brand {
+        margin-left: 70px;
+    }
+    .form-check {
+        margin-left: 70px;
+    }
+}
+
+/* For mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    button {
+        font-size: 14px;
+        width: 270px; /* Make buttons take full width on small screens */
+        display: block; /* Stack buttons vertically */
+    }
+    #Btn1,#Btn2,#Btn3 {
+        margin-left: 50px;
+    }
+    .navbar-brand {
+        margin-left: 50px;
+    }
+    .form-check {
+        display: block;
+    }
+    .form-label {
+        display: none;
+    }
+    .form-control {
+        margin-top: 40px;
+    }
+    h4 {
+        font-size: 13px;  
+        margin-top: 5px;  
+    }
 }
