@@ -5,17 +5,20 @@ import React,{useState} from 'react'
 export default function TextForm(props) {
     let handel = () => {
         let newText = text.toLocaleUpperCase();
-        setText(newText)
+        setText(newText);
+        props.showAlert("Text covert to uppercase", 'success');
     }
     let handel2 = () => {
         let newText = text.toLocaleLowerCase();
         setText(newText)
+        props.showAlert("Text covert to lowercase", 'success')
     }
     let handel3 = () => {
       if(text!=="") {
         let randomnumnber = Math.floor(Math.random() *100)+1;
         let newText = '@'+text+randomnumnber+'.gmail.com';
-        setText(newText)
+        setText(newText);
+        props.showAlert("Text covert to gmail form", 'success')
       }
     }
     let handel4 = () => {
@@ -34,18 +37,18 @@ export default function TextForm(props) {
       let text = document.getElementById('mybox');
       text.select();
       navigator.clipboard.writeText(text.value)
-      window.alert("Text copied");
+      props.showAlert("Text copied to clipbord", 'success')
     }
     let handelExtra = () => {
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "));
+      props.showAlert("Succesfully remove extra spaces from text area", 'success')
     }
-    
     const [text, setText]= useState(" ");
   return (
     <>
 <div className="mb-3">
-  <label htmlFor="Mybox" className="form-label">Enter text below</label>
+  <label htmlFor="Mybox" className="form-label" data-bs-theme='dark'>Enter text below</label>
   <textarea className="form-control" id="mybox" rows="8" value={text} onChange={handelChange}></textarea>
   <button id='Btn1' className="btn btn-success"onClick={handel}>Convert to uppercase</button>
   <button id='Btn2' className="btn btn-success"onClick={handel2}>Convert to Lowercase</button>
@@ -59,8 +62,7 @@ export default function TextForm(props) {
   <h1>Your text summery</h1>
   <p>Total words <b>{text===""?0:text.trim().split(" ").length}</b> Total Characters <b>{text.length}</b></p>
   <p><b>{text===""?0:0.008*text.split(" ").length}</b> Minutes to read</p>
-</div>
+</div> 
 </>
   )
 }
-  

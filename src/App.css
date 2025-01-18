@@ -2,8 +2,30 @@
     text-align: center;
     color: blue;
     margin-left: 400px;
-    margin-top: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 30px;
+}
+.form-check-input {
+    margin-top: 12px;
+}
+.carousel-item img{
+    height: 500px;
+}
+.navbar {
+    box-shadow: 1px 2px 5px 1px black;
+}
+.ma{
+    display: flex;
+    text-align: center;
+}
+#input1 {
+    margin-left: 20px;
+    border: 2px solid black;
+    margin-top: 23px;
+}
+#about {
+    margin-top: 30px;
 }
 *{
     margin: 0;
@@ -11,7 +33,7 @@
     box-sizing: border-box;
 }
 body {
-    /* height: 600px; */
+     /* height: 1200px;  */
     /* background-color: rgb(250, 246, 246); */
 }
 #Btn1,#Btn2 {
@@ -32,39 +54,19 @@ h1,p,h2{
 b {
     color: green;
 }
+#brppm {
+    margin-top: 22px;
+}
+h4 {
+    font-size: 15px;
+    margin-top: 12px;
+    margin-left: 5px;
+}
 .ntn11 {
     display: flex;
     justify-content: center;
 }
 /* For devices with a width of 1200px and above (desktops) */
-@media (min-width: 1200px) {
-    button {
-        font-size: 18px;
-        padding: 12px 10px;
-        margin: 10px;
-    }
-    .navbar-brand {
-        margin-left: 70px;
-    }
-    .form-check {
-        margin-left: 70px;
-    }
-}
-
-/* For tablets (768px to 1199px) */
-@media (min-width: 768px) and (max-width: 1199px) {
-    button {
-        font-size: 16px;
-        padding: 10px 10px;
-        margin: 8px;
-    }
-    .navbar-brand {
-        margin-left: 70px;
-    }
-    .form-check {
-        margin-left: 70px;
-    }
-}
 
 /* For mobile devices (up to 767px) */
 @media (max-width: 767px) {
@@ -75,9 +77,11 @@ b {
     }
     #Btn1,#Btn2,#Btn3 {
         margin-left: 50px;
+        margin-top: 10px;
     }
     .navbar-brand {
         margin-left: 50px;
+      
     }
     .form-check {
         display: block;
