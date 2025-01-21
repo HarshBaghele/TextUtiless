@@ -1,31 +1,29 @@
 .form-label {
     text-align: center;
-    color: blue;
-    margin-left: 400px;
+    margin-left: 350px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 30px;
+    color: black;
 }
-.form-check-input {
-    margin-top: 12px;
+#flexSwitchCheckDefault {
+
 }
-.carousel-item img{
-    height: 500px;
+.nav-link {
+    margin-left: 20px;
+    text-decoration: none;
 }
 .navbar {
     box-shadow: 1px 2px 5px 1px black;
-}
-.ma{
-    display: flex;
-    text-align: center;
 }
 #input1 {
     margin-left: 20px;
     border: 2px solid black;
     margin-top: 23px;
 }
-#about {
+#about11 {
     margin-top: 30px;
+    
 }
 *{
     margin: 0;
@@ -39,28 +37,27 @@ body {
 #Btn1,#Btn2 {
     margin-top: 20px;
     margin-left: 20px;
-}
-#Btn1 {
-    
+    border: 1px solid grey;
 }
 #Btn3 {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 440px;
+    border: 1px solid grey;
 }
+
 h1,p,h2{
     text-align: center;
     margin-bottom: 20px;
 }
 b {
-    color: green;
+    color: red;
 }
 #brppm {
     margin-top: 22px;
 }
 h4 {
     font-size: 15px;
-    margin-top: 12px;
-    margin-left: 5px;
+    margin-top: 10px;
 }
 .ntn11 {
     display: flex;
@@ -75,19 +72,22 @@ h4 {
         width: 270px; /* Make buttons take full width on small screens */
         display: block; /* Stack buttons vertically */
     }
-    #Btn1,#Btn2,#Btn3 {
+    #Btn1,#Btn2{
         margin-left: 50px;
         margin-top: 10px;
     }
-    .navbar-brand {
+    #Btn3  {
         margin-left: 50px;
-      
+        margin-top: 10px;
     }
     .form-check {
         display: block;
     }
     .form-label {
-        display: none;
+        font-size: 20px;
+        margin-left: 50px;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
     .form-control {
         margin-top: 40px;
